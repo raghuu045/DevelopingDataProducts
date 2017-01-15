@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Here are the Major cities in Masachusetts. The circles are sized by population in the cities with population popup, sourced from [Here](https://www.citypopulation.de/USA-Massachusetts.html)
 
-``` {r,echo=FALSE,messages=FALSE}
+``` {r,echo=TRUE,messages=FALSE}
 suppressPackageStartupMessages(library(ggmap))
 suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(leaflet))
