@@ -26,10 +26,10 @@ md_cities <- data.frame(name = c("Boston MA", "Worcester MA","Springfield MA","L
                         pop = c(667137,184815,154341,110699,95314,110402,94958,93618,92457),
                         lat = lonlat$lat,
                         lng = lonlat$lon)
-pop = c(667137,184815,154341,110699,95314,110402,94958,93618,92457)
+
 suppressMessages(md_cities %>%
         leaflet() %>%
         addTiles() %>%
         addCircles(weight = 1, radius = sqrt(md_cities$pop) * 20) %>%
-        addMarkers(clusterOptions = markerClusterOptions(), popup = paste(pop, " [2015]")))
+        addMarkers(clusterOptions = markerClusterOptions(), popup = paste(md_cities$pop, " [2015]")))
 ```
